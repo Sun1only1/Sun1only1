@@ -1,0 +1,81 @@
+Q1. What are Corpora?
+A.	In Natural Language Processing (NLP), a corpus (plural: corpora) is a large and structured set of texts. Think of it as a collection of written or spoken language used for linguistic analysis and building NLP models. It's the raw material that NLP algorithms learn from.
+Corpora are typically quite large, containing thousands, millions, or even billions of words. The more data, generally the better the NLP model can learn.
+
+Q2. What are Tokens?
+A.	In Natural Language Processing (NLP), tokens are the fundamental building blocks of text that a model processes. They are the individual units that the text is broken down into. The exact definition of a token can vary depending on the specific task and the level of granularity you're working with. Think of them as the "words" (or word-like units) your NLP model understands.
+Types of Tokens:
+·Words: This is the most common type of token. Text is segmented into individual words, separated by spaces or punctuation. For example, the sentence "The cat sat on the mat" would be tokenized into the tokens: "The", "cat", "sat", "on", "the", "mat". However, even simple cases can be tricky. Should "don't" be one token or two ("do", "n't")? How about "ice-cream"?   
+·	Subwords: In many cases, especially when dealing with large vocabularies or languages with complex morphology (word formation), words are further broken down into subword units. This helps the model understand words it hasn't seen before. Subwords can include:   
+·	Character n-grams: Sequences of n characters (e.g., "th", "he", "el", "ll", "lo" for the word "hello"). Useful for catching misspellings and similarities between words.   
+·	Morphemes: The smallest meaningful units in a language (e.g., "un", "happi", "ness" for "unhappiness"). These carry semantic weight.   
+·	Byte Pair Encoding (BPE) or WordPiece: Algorithms that learn a vocabulary of subword units based on co-occurrence statistics. These are very common in modern NLP, especially with transformer models like BERT. They balance vocabulary size with the ability to handle out-of-vocabulary words.   
+·	Characters: At the finest level of granularity, text can be tokenized into individual characters. This is less common for most NLP tasks but can be useful for tasks like character-level language modeling or dealing with out-of-vocabulary words (by looking at the characters that make them up).   
+·	Punctuation: Punctuation marks (commas, periods, etc.) can also be treated as separate tokens. This can be important for certain tasks, like sentiment analysis, where punctuation can carry meaning (e.g., "Wow!" vs. "Wow.").   
+·	Numbers: Numbers can be treated as separate tokens or grouped together.   
+·	Special Tokens: NLP models often use special tokens to represent specific elements:   
+·	<UNK>: Represents unknown or out-of-vocabulary words. "I've never seen this word before: flibbertygibbet." "flibbertygibbet" might become <UNK>.
+·	<SOS>: Marks the beginning of a sentence.
+·	<EOS>: Marks the end of a sentence.
+·	<PAD>: Used to pad sequences to a uniform length (because neural networks like fixed-size inputs).
+
+Q3.  What are Unigrams, Bigrams, Trigrams?
+A.	Unigrams (1-grams):
+These are simply individual words.
+Example: In the sentence "The cat sat on the mat", the unigrams are: "The", "cat", "sat", "on", "the", "mat"
+Bigrams (2-grams):
+These are sequences of two adjacent words.   
+Example: In the sentence "The cat sat on the mat", the bigrams are: "The cat", "cat sat", "sat on", "on the", "the mat"   
+Trigrams (3-grams):
+These are sequences of three adjacent words.
+Example: In the sentence "The cat sat on the mat", the trigrams are: "The cat sat", "cat sat on", "sat on the", "on the mat"
+Q4. How to generate n-grams from text?
+A.	Here are a few ways, ranging from simple to more robust:
+1. Basic Python (using zip)
+This approach is concise for generating bigrams and can be extended for trigrams, but it becomes a bit cumbersome for larger n-grams
+      2. Using nltk (Natural Language Toolkit) 1   
+              nltk provides a more convenient and flexible way to generate n-grams, especially for larger values of 'n'.
+ 3. Handling Punctuation and Lowercasing (using nltk and string methods)
+Often, you'll want to preprocess your text before generating n-grams. This might include removing punctuation, converting to lowercase, etc.
+4. More Efficient N-gram Counting (using collections.Counter)
+If you're interested in counting the frequency of n-grams, collections.Counter is highly efficient.
+
+Q5. Explain Lemmatization?
+A. Lemmatization is a crucial process in Natural Language Processing (NLP) that aims to reduce words to their base or dictionary form, known as the lemma. It's similar to stemming, but lemmatization goes a step further by considering the meaning of the word and the context in which it's used.
+
+6Q. Explain Stemming?
+A. Stemming is a process in Natural Language Processing (NLP) that involves reducing words to their root or base form, known as the stem. It's a simpler, often faster, approach than lemmatization, but it can be less precise because it doesn't always consider the meaning of the word or its context.
+
+7Q. Explain Part-of-speech (POS) tagging?
+A. Part-of-speech (POS) tagging is the process of assigning grammatical tags to each word in a text. These tags indicate the role a word plays in a sentence, such as noun, verb, adjective, adverb, etc. It's a fundamental step in many Natural Language Processing (NLP) tasks.
+
+8Q. Explain Chunking or shallow parsing?
+A.	Chunking, also known as shallow parsing, is a natural language processing (NLP) technique that involves grouping words in a sentence into syntactically related phrases. It's a step up from part-of-speech (POS) tagging but less complex than full parsing.
+B.	Chunking identifies and labels groups of words, called "chunks," that represent basic syntactic units like noun phrases (NPs), verb phrases (VPs), and prepositional phrases (PPs). It doesn't analyze the full grammatical structure of the sentence but focuses on identifying these key phrases.
+9Q. Explain Noun Phrase (NP) chunking?
+A.	Noun Phrase (NP) chunking is a specific type of chunking where the focus is solely on identifying and extracting noun phrases from a sentence. Since noun phrases are fundamental building blocks of sentence structure, NP chunking is a particularly useful task in NLP.
+What are Noun Phrases?
+A noun phrase is a phrase that centers around a noun. It can consist of just a single noun, or it can be more complex, including determiners, adjectives, other nouns, and prepositional phrases. Here are some examples:
+·	Simple Noun Phrases:
+·	cat
+·	book
+·	John
+·	More Complex Noun Phrases:
+·	the big cat
+·	a red book on the table
+·	John's car
+·	the students in the classroom
+What NP Chunking Does:
+NP chunking identifies and groups the words that make up these noun phrases. It labels the chunks as "NP."
+Why is NP Chunking Important?
+NP chunking is essential for many NLP tasks:
+·	Information Extraction: Identifying noun phrases is crucial for extracting key information from text, such as: 
+·	Entities: Many named entities (people, organizations, locations) are noun phrases.
+·	Relationships: Understanding the relationships between entities often involves analyzing the noun phrases they appear in.
+·	Parsing: NP chunking can be a first step towards full parsing, providing a foundation for understanding the grammatical structure of sentences.
+·	Text Summarization: Identifying important noun phrases can help in determining the key topics of a document, which is useful for summarization.
+·	Question Answering: Understanding noun phrases in both the question and the answer is crucial for accurate question answering systems.
+
+10Q. Explain Named Entity Recognition?
+A.	Named Entity Recognition (NER) is a subtask of information extraction that seeks to identify and classify named entities in text into predefined categories, such as persons, organizations, locations, dates, times, quantities, monetary values, percentages, etc. Essentially, NER helps computers understand who did what, where, and when by recognizing the key players and details in a text.
+
