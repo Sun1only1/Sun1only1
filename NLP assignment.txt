@@ -1,0 +1,81 @@
+1. What is one hot encoding?
+A. One-Hot Encoding is a technique used in machine learning and data preprocessing to convert categorical data into a numerical format that can be fed into machine learning algorithms. Many machine learning algorithms require numerical input, and One-Hot Encoding is a way to represent categorical variables as binary vectors.
+
+  How It Works:
+    1.Identify Categories: Suppose you have a categorical feature with n distinct categories.
+
+    2.Create Binary Columns: For each category, you create a new binary column (also known as a dummy variable).
+
+    3.Assign Values: For each data point, you set the value of the corresponding binary column to 1 if the data point belongs to that    category, and 0 otherwise.
+
+2. Explain Bag of Words?
+A. The Bag of Words (BoW) model is a simple and widely used technique in Natural Language Processing (NLP) for representing text data in a numerical format. It is commonly used for tasks like text classification, sentiment analysis, and information retrieval. The BoW model treats text as an unordered collection of words (hence the term "bag") and ignores grammar, word order, and context, focusing only on the frequency of words.
+
+3.Explain Bag of N-Grams?
+A. N-grams are groups of 'N' adjacent items in a text. These items can be:
+Words   
+Characters   
+Syllables
+
+Bag of N-Grams
+
+Representation: A way to turn text into numbers that machine learning models can understand.   
+Process:
+Create N-grams: Divide your text into the desired n-grams.
+Count: Count how many times each unique n-gram appears in your text.
+Vector: Create a vector (list of numbers) where:
+Each position in the vector represents a unique n-gram
+The number in that position is the count of how many times that n-gram appeared
+
+4.Explain TF-IDF?
+A. TF-IDF stands for Term Frequency-Inverse Document Frequency. It's a statistical measure used to evaluate how important a word is to a document within a collection of documents (called a corpus).  It's often used in information retrieval and text mining.
+
+Here's a breakdown of the two components and how they combine:
+
+1. Term Frequency (TF)
+
+What it measures: How often a term (word) appears in a specific document.
+
+2.Inverse Document Frequency (IDF)
+
+What it measures: How rare a term is across the entire corpus of documents.  Common words like "the", "a", "is" will have low IDF scores because they appear in almost every document.  Rare words will have higher IDF scores.   
+
+3. TF-IDF
+
+Combining TF and IDF:  TF-IDF is simply the product of TF and IDF:
+Interpretation:
+
+A high TF-IDF score means the term is frequent in a specific document and rare in the corpus. This indicates the term is likely very relevant to that particular document.
+A low TF-IDF score means the term is either not very frequent in the document, or it's common across many documents (or both).
+
+5.What is OOV problem?
+A. In Natural Language Processing (NLP), the Out-of-Vocabulary (OOV) problem refers to the challenge of encountering words in new text that were not present in the training data used to build a language model.
+
+Here's a breakdown of the issue:
+
+The Problem
+
+Limited Vocabulary: Language models, whether they're used for machine translation, text classification, or any other NLP task, have a limited vocabulary. They can only understand and process words they've seen during training.   
+Real-World Language is Vast: Human language is incredibly diverse and constantly evolving. New words are coined, slang terms emerge, and specialized vocabulary exists for different domains. It's impossible for any training dataset to capture every single word.   
+OOV Words Cause Issues: When a model encounters an OOV word, it doesn't know what to do with it. This can lead to:
+Errors: The model might misinterpret the meaning of the sentence or make incorrect predictions.   
+Reduced Performance: The overall accuracy and effectiveness of the NLP system can suffer.
+
+
+6. What are word embeddings?
+A. Word embeddings are a way to represent words as dense, continuous vectors in a high-dimensional space. The idea is that words with similar meanings will have vectors that are close to each other in this space.   
+
+Here's a breakdown of why they're important and how they work:
+
+Why Word Embeddings?
+
+Capture Meaning: Unlike traditional methods like one-hot encoding, word embeddings capture semantic relationships between words. Words with similar meanings have vectors that are close together.   
+Continuous Representation: Word embeddings represent words as continuous vectors, rather than discrete symbols. This allows for smoother transitions between words and enables mathematical operations on the vectors.   
+Lower Dimensionality: Compared to one-hot encoding, word embeddings have much lower dimensionality. This makes them more efficient to work with and reduces the computational burden.   
+
+
+7. The Continuous Bag-of-Words (CBOW) model is a type of neural network architecture used for learning word embeddings.  It's one of the two models (along with Skip-gram) introduced by Mikolov et al. in their Word2Vec paper.  CBOW aims to predict a target word based on the context of surrounding words.
+
+8. The Skip-gram model is another popular architecture for learning word embeddings, introduced alongside the Continuous Bag-of-Words (CBOW) model in the Word2Vec paper. Unlike CBOW, which predicts a target word given its context, Skip-gram does the reverse: it predicts the context words given a target word.
+
+9. GloVe, which stands for Global Vectors for Word Representation, is a word embedding model that combines the benefits of global matrix factorization and local context window methods. It was developed by researchers at Stanford University and is a popular choice for various NLP task
