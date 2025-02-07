@@ -1,0 +1,157 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset0 Calibri;}{\f2\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green0\blue255;\red5\green99\blue193;}
+{\*\listtable 
+{\list\listhybrid
+{\listlevel\levelnfc23\leveljc0\levelstartat1{\leveltext\'01\'B7;}{\levelnumbers;}\f2\jclisttab\tx360}
+{\listlevel\levelnfc23\leveljc0\levelstartat1{\leveltext\'01\'B7;}{\levelnumbers;}\f2\jclisttab\tx360}\listid1 }
+{\list\listhybrid
+{\listlevel\levelnfc0\leveljc0\levelstartat1{\leveltext\'02\'00.;}{\levelnumbers\'01;}\jclisttab\tx0}
+{\listlevel\levelnfc4\leveljc0\levelstartat1{\leveltext\'02\'01.;}{\levelnumbers\'01;}\jclisttab\tx0}
+{\listlevel\levelnfc3\leveljc0\levelstartat1{\leveltext\'02\'02.;}{\levelnumbers\'01;}\jclisttab\tx0}\listid2 }
+{\list\listhybrid
+{\listlevel\levelnfc23\leveljc0\levelstartat1{\leveltext\'01\'B7;}{\levelnumbers;}\f2\jclisttab\tx360}
+{\listlevel\levelnfc23\leveljc0\levelstartat1{\leveltext\'01\'B7;}{\levelnumbers;}\f2\jclisttab\tx360}\listid3 }
+{\list\listhybrid
+{\listlevel\levelnfc23\leveljc0\levelstartat1{\leveltext\'01\'B7;}{\levelnumbers;}\f2\jclisttab\tx360}
+{\listlevel\levelnfc23\leveljc0\levelstartat1{\leveltext\'01\'B7;}{\levelnumbers;}\f2\jclisttab\tx360}\listid4 }}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\widctlpar\sa160\sl252\slmult1\kerning2\f0\fs22\lang16393 Q1. What are Corpora?\par
+
+\pard 
+{\pntext\f0 A.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pnucltr{\pntxta.}}
+\widctlpar\fi-360\li720\sa160\sl252\slmult1 In Natural Language Processing (NLP), a \b corpus\b0  (plural: \b corpora\b0 ) is a large and structured set of texts. Think of it as a collection of written or spoken language used for linguistic analysis and building NLP models. It's the raw material that NLP algorithms learn from.\par
+
+\pard\widctlpar\sa160\sl252\slmult1 Corpora are typically quite large, containing thousands, millions, or even billions of words. The more data, generally the better the NLP model can learn.\par
+\par
+Q2. What are Tokens?\par
+
+\pard 
+{\pntext\f0 A.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pnucltr{\pntxta.}}
+\widctlpar\fi-360\li720\sa160\sl252\slmult1 In Natural Language Processing (NLP), \b tokens\b0  are the fundamental building blocks of text that a model processes. They are the individual units that the text is broken down into. The exact definition of a token can vary depending on the specific task and the level of granularity you're working with. Think of them as the "words" (or word-like units) your NLP model understands.\par
+
+\pard\widctlpar\sa160\sl252\slmult1\b Types of Tokens:\b0\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\jclisttab\tx360\ls1\widctlpar\fi-360\li720\sa160\sl252\slmult1\b Words:\b0  This is the most common type of token. Text is segmented into individual words, separated by spaces or punctuation. For example, the sentence "The cat sat on the mat" would be tokenized into the tokens: "The", "cat", "sat", "on", "the", "mat". However, even simple cases can be tricky. Should "don't" be one token or two ("do", "n't")? How about "ice-cream"? \~ \par
+{\listtext\f0 1\tab}\b Subwords:\b0  In many cases, especially when dealing with large vocabularies or languages with complex morphology (word formation), words are further broken down into subword units. This helps the model understand words it hasn't seen before. Subwords can include: \~ \par
+
+\pard 
+{\listtext\f0\u10625?\tab}\jclisttab\tx360\ls1\ilvl1\widctlpar\fi-360\li1440\sa160\sl252\slmult1\b Character n-grams:\b0  Sequences of \i n\i0  characters (e.g., "th", "he", "el", "ll", "lo" for the word "hello"). Useful for catching misspellings and similarities between words. \~ \par
+{\listtext\f0 1\tab}\b Morphemes:\b0  The smallest meaningful units in a language (e.g., "un", "happi", "ness" for "unhappiness"). These carry semantic weight. \~ \par
+{\listtext\f0 2\tab}\b Byte Pair Encoding (BPE) or WordPiece:\b0  Algorithms that learn a vocabulary of subword units based on co-occurrence statistics. These are very common in modern NLP, especially with transformer models like BERT. They balance vocabulary size with the ability to handle out-of-vocabulary words. \~ \par
+
+\pard 
+{\listtext\f0\u10625?\tab}\jclisttab\tx360\ls1\widctlpar\fi-360\li720\sa160\sl252\slmult1\b Characters:\b0  At the finest level of granularity, text can be tokenized into individual characters. This is less common for most NLP tasks but can be useful for tasks like character-level language modeling or dealing with out-of-vocabulary words (by looking at the characters that make them up). \~ \par
+{\listtext\f0 1\tab}\b Punctuation:\b0  Punctuation marks (commas, periods, etc.) can also be treated as separate tokens. This can be important for certain tasks, like sentiment analysis, where punctuation can carry meaning (e.g., "Wow!" vs. "Wow."). \~ \par
+{\listtext\f0 2\tab}\b Numbers:\b0  Numbers can be treated as separate tokens or grouped together. \~ \par
+{\listtext\f0 3\tab}\b Special Tokens:\b0  NLP models often use special tokens to represent specific elements: \~ \par
+
+\pard 
+{\listtext\f0\u10625?\tab}\jclisttab\tx360\ls1\ilvl1\widctlpar\fi-360\li1440\sa160\sl252\slmult1 <UNK>: Represents unknown or out-of-vocabulary words. "I've never seen this word before: flibbertygibbet." "flibbertygibbet" might become <UNK>.\par
+{\listtext\f0 1\tab}<SOS>: Marks the beginning of a sentence.\par
+{\listtext\f0 2\tab}<EOS>: Marks the end of a sentence.\par
+{\listtext\f0 3\tab}<PAD>: Used to pad sequences to a uniform length (because neural networks like fixed-size inputs).\par
+
+\pard\widctlpar\li1440\sa160\sl252\slmult1\par
+
+\pard\widctlpar\sa160\sl252\slmult1 Q3.  What are Unigrams, Bigrams, Trigrams?\par
+
+\pard 
+{\pntext\f0 A.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pnucltr{\pntxta.}}
+\widctlpar\fi-360\li720\sa160\sl252\slmult1\b Unigrams (1-grams):\b0\par
+
+\pard\widctlpar\li720\sa160\sl252\slmult1 These are simply individual words.\par
+Example: In the sentence "The cat sat on the mat", the unigrams are: "The", "cat", "sat", "on", "the", "mat"\par
+\b Bigrams (2-grams):\b0\par
+These are sequences of two adjacent words. \~ \par
+Example: In the sentence "The cat sat on the mat", the bigrams are: "The cat", "cat sat", "sat on", "on the", "the mat" \~ \par
+\b Trigrams (3-grams):\b0\par
+These are sequences of three adjacent words.\par
+Example: In the sentence "The cat sat on the mat", the trigrams are: "The cat sat", "cat sat on", "sat on the", "on the mat"\par
+
+\pard\widctlpar\sa160\sl252\slmult1 Q4. How to generate n-grams from text?\par
+
+\pard 
+{\pntext\f0 A.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pnucltr{\pntxta.}}
+\widctlpar\fi-360\li720\sa160\sl252\slmult1 Here are a few ways, ranging from simple to more robust:\par
+
+\pard\widctlpar\li360\sa160\sl252\slmult1\b 1. Basic Python (using zip)\b0\par
+
+\pard\widctlpar\li720\sa160\sl252\slmult1 This approach is concise for generating bigrams and can be extended for trigrams, but it becomes a bit cumbersome for larger n-grams\par
+
+\pard\widctlpar\sa160\sl252\slmult1       \b 2. Using nltk (Natural Language Toolkit)\super\b0  1 \nosupersub\~ \par
+              nltk provides a more convenient and flexible way to generate n-grams, especially for larger values of 'n'.\par
+ \b 3. Handling Punctuation and Lowercasing (using nltk and string methods)\b0\par
+Often, you'll want to preprocess your text before generating n-grams. This might include removing punctuation, converting to lowercase, etc.\par
+\b 4. More Efficient N-gram Counting (using collections.Counter)\b0\par
+If you're interested in counting the frequency of n-grams, collections.Counter is highly efficient.\par
+\par
+Q5. Explain Lemmatization?\par
+A. Lemmatization is a crucial process in Natural Language Processing (NLP) that aims to reduce words to their base or dictionary form, known as the \i lemma\i0 . It's similar to stemming, but lemmatization goes a step further by considering the \i meaning\i0  of the word and the context in which it's used.\par
+\par
+6Q. Explain Stemming?\par
+A. Stemming is a process in Natural Language Processing (NLP) that involves reducing words to their root or base form, known as the \i stem\i0 . It's a simpler, often faster, approach than lemmatization, but it can be less precise because it doesn't always consider the meaning of the word or its context.{{\field{\*\fldinst{HYPERLINK "https://www.projectpro.io/recipes/find-ngrams-from-text"}}{\fldrslt{\ul\cf1\cf2\ul\par
+}}}}\f0\fs22\par
+7Q. Explain Part-of-speech (POS) tagging?\par
+A. Part-of-speech (POS) tagging is the process of assigning grammatical tags to each word in a text. These tags indicate the role a word plays in a sentence, such as noun, verb, adjective, adverb, etc. It's a fundamental step in many Natural Language Processing (NLP) tasks.\par
+\par
+8Q. Explain Chunking or shallow parsing?\par
+
+\pard 
+{\listtext\f0 A.\tab}\ls2\ilvl2\widctlpar\fi-360\li2160\sa160\sl252\slmult1 Chunking, also known as shallow parsing, is a natural language processing (NLP) technique that involves grouping words in a sentence into syntactically related phrases. It's a step up from part-of-speech (POS) tagging but less complex than full parsing.\par
+{\listtext\f0 B.\tab}Chunking identifies and labels groups of words, called "chunks," that represent basic syntactic units like noun phrases (NPs), verb phrases (VPs), and prepositional phrases (PPs). It doesn't analyze the full grammatical structure of the sentence but focuses on identifying these key phrases.\par
+
+\pard\widctlpar\sa160\sl252\slmult1 9Q. Explain Noun Phrase (NP) chunking?\par
+
+\pard 
+{\pntext\f0 A.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pnucltr{\pntxta.}}
+\widctlpar\fi-360\li720\sa160\sl252\slmult1 Noun Phrase (NP) chunking is a specific type of chunking where the focus is solely on identifying and extracting noun phrases from a sentence. Since noun phrases are fundamental building blocks of sentence structure, NP chunking is a particularly useful task in NLP.\par
+
+\pard\widctlpar\sa160\sl252\slmult1\b What are Noun Phrases?\b0\par
+A noun phrase is a phrase that centers around a noun. It can consist of just a single noun, or it can be more complex, including determiners, adjectives, other nouns, and prepositional phrases. Here are some examples:\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\jclisttab\tx360\ls3\widctlpar\fi-360\li720\sa160\sl252\slmult1\b Simple Noun Phrases:\b0\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\jclisttab\tx360\ls3\ilvl1\widctlpar\fi-360\li1440\sa160\sl252\slmult1 cat\par
+{\listtext\f0 1\tab}book\par
+{\listtext\f0 2\tab}John\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\jclisttab\tx360\ls3\widctlpar\fi-360\li720\sa160\sl252\slmult1\b More Complex Noun Phrases:\b0\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\jclisttab\tx360\ls3\ilvl1\widctlpar\fi-360\li1440\sa160\sl252\slmult1 the big cat\par
+{\listtext\f0 1\tab}a red book on the table\par
+{\listtext\f0 2\tab}John's car\par
+{\listtext\f0 3\tab}the students in the classroom\par
+
+\pard\widctlpar\sa160\sl252\slmult1\b What NP Chunking Does:\b0\par
+NP chunking identifies and groups the words that make up these noun phrases. It labels the chunks as "NP."\par
+\b Why is NP Chunking Important?\b0\par
+NP chunking is essential for many NLP tasks:\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\jclisttab\tx360\ls4\widctlpar\fi-360\li720\sa160\sl252\slmult1\b Information Extraction:\b0  Identifying noun phrases is crucial for extracting key information from text, such as: \par
+
+\pard 
+{\listtext\f0\u10625?\tab}\jclisttab\tx360\ls4\ilvl1\widctlpar\fi-360\li1440\sa160\sl252\slmult1\b Entities:\b0  Many named entities (people, organizations, locations) are noun phrases.\par
+{\listtext\f0 1\tab}\b Relationships:\b0  Understanding the relationships between entities often involves analyzing the noun phrases they appear in.\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\jclisttab\tx360\ls4\widctlpar\fi-360\li720\sa160\sl252\slmult1\b Parsing:\b0  NP chunking can be a first step towards full parsing, providing a foundation for understanding the grammatical structure of sentences.\par
+{\listtext\f0 1\tab}\b Text Summarization:\b0  Identifying important noun phrases can help in determining the key topics of a document, which is useful for summarization.\par
+{\listtext\f0 2\tab}\b Question Answering:\b0  Understanding noun phrases in both the question and the answer is crucial for accurate question answering systems.\par
+
+\pard\widctlpar\sa160\sl252\slmult1\par
+10Q. Explain Named Entity Recognition?\par
+
+\pard 
+{\pntext\f0 A.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pnucltr{\pntxta.}}
+\widctlpar\fi-360\li720\sa160\sl252\slmult1 Named Entity Recognition (NER) is a subtask of information extraction that seeks to identify and classify named entities in text into predefined categories, such as persons, organizations, locations, dates, times, quantities, monetary values, percentages, etc. Essentially, NER helps computers understand \i who\i0  did \i what\i0 , \i where\i0 , and \i when\i0  by recognizing the key players and details in a text.\par
+
+\pard\sa200\sl276\slmult1\kerning0\f1\lang9\par
+}
+ 
